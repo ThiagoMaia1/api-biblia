@@ -1,0 +1,7 @@
+[{"version":"acf","verses":31106, "nome": "Almeida Corrigida Fiel (ACF)", "língua": "Português", "abreviacao": "acf"},
+{"version":"apee","verses":30975, "nome": "La Bible de l'Épée (APEE)", "língua": "Francês", "abreviacao": "apee"},
+{"version":"bbe","verses":31104, "nome": "The Bible in Basic English (BBE)", "língua": "Inglês", "abreviacao": "bbe"},
+{"version":"kjv","verses":31101, "nome": "King James Version (KJV)", "língua": "Inglês", "abreviacao": "kjv"},
+{"version":"nvi","verses":31105, "nome": "Nova Versão Internacional (NVI)", "língua": "Português", "abreviacao": "nvi"},
+{"version":"ra","verses":31104, "nome": "Almeida Atualizada (AA)", "língua": "Português", "abreviacao": "aa"},
+{"version":"rvr","verses":31102, "nome": "Reina-Valera Antigua (RVA)", "língua": "Espanhol", "abreviacao": "rva"}]
