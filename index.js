@@ -7,32 +7,42 @@ const { handleError, ErrorHandler } = require('./ErrorHandler.js');
 
 const app = express();
 
-const port = process.env.PORT ?? 8080;
+const port = process.env.port ?? 8080;
 
 app.use(express.json());
 
-const services = { 
-    texto: (req, res, next) => {
-        getTextoBiblico(req.params.strReferencia, req.params.strVersao, next)
+const servicos = {
+    servicos: {
+        funcao: (_req, res, _next) => res.status(200).json({servicos}),
+        descricao: 'Lista os serviços disponíveis.',
+    },
+    texto: {
+        funcao: (req, res, next) => {
+        getTextoBiblico(req.params.strReferencia, req.params.strVersao)
             .then((resultado) =>
                 res.status(200).json(resultado)
             )
             .catch((error) => next(error));
+        },
+        descricao: 'Retorna o texto bíblico definido pela referência indicada no próximo caminho, na versão indicada no caminho seguinte (ou NVI se a versão não for informada).'
     },
-    versoes: (_req, res, _next) => {
-        let versoes = require('./Versoes.json');
-        res.status(200).json(versoes);
+    versoes: {
+        funcao: (_req, res, _next) => {
+            let versoes = require('./Versoes.json');
+            res.status(200).json(versoes);
+        },
+        descricao: 'Retorna a lista de versões da bíblia disponíveis.',
     }
 }
 
 app.get(
-    '/:service/:strReferencia?/:strVersao?', 
+    '/:service?/:strReferencia?/:strVersao?', 
     (req, res, next) => {
         let service;
         try {
-            service = services[req.params.service];
+            service = servicos[req.params.service ?? 'servicos'];
             if (!service) throw new ErrorHandler(404, 'Serviço não existe.');
-            service(req, res, next)
+            service.funcao(req, res, next)
         }
         catch (error) {
             next(error);

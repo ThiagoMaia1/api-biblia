@@ -34,7 +34,7 @@ function versiculosParaString(versiculos) {
     })
 }
 
-async function getTextoBiblico(str, versao = 'nvi', next, toString = false) {
+async function getTextoBiblico(str, versao = 'nvi', toString = false) {
     
     let versoes = require('./Versoes.json');
     
@@ -52,9 +52,8 @@ async function getTextoBiblico(str, versao = 'nvi', next, toString = false) {
     } catch (e) {
         return e;
     }
-    while (!finalizado) {
+    while (!finalizado) 
         await new Promise(resolve => setTimeout(resolve, 100));
-    }
     if (toString) versiculos = versiculosParaString(versiculos)
     return versiculos;
     
