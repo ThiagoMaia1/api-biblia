@@ -7,7 +7,7 @@ const { handleError, ErrorHandler } = require('./ErrorHandler.js');
 
 const app = express();
 
-const port = 5001
+const port = process.env.port ?? 5001;
 
 app.use(express.json());
 
