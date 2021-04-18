@@ -39,6 +39,10 @@ app.get(
     '/:service?/:strReferencia?/:strVersao?', 
     (req, res, next) => {
         let service;
+        res.header('Access-Control-Allow-Origin', '*')
+        res.header('Access-Control-Allow-Credentials', true)
+        res.header('Access-Control-Allow-Methods', 'GET, OPTIONS')
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
         try {
             service = servicos[req.params.service ?? 'servicos'];
             if (!service) throw new ErrorHandler(404, 'Serviço não existe.');
