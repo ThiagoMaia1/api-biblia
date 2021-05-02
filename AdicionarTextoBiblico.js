@@ -47,7 +47,7 @@ async function getTextoBiblico(str, versao = 'nvi', toString = false) {
     let versiculos = [];
     let contadorRef = 0;
     let finalizado = false;
-    try{
+    try {
         let _ = await identificarReferencia(str);
     } catch (e) {
         return e;
