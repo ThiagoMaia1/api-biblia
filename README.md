@@ -28,7 +28,7 @@ URL: https://www.bibliaparahumanos.tk/
 
 **texto/Lc3:1-5, x1, num10:5**: Se uma das referências for inválida, isso não atrapalha o restante do resultado.
         
-English 
+English
 =========
 
 # Bible API for Humans
