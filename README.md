@@ -1,4 +1,5 @@
-# Português
+Português
+=========
 
 # API Bíblia para Humanos
 ### Escreva referências do jeito que quiser, e receba de volta os textos bíblicos.
@@ -21,13 +22,14 @@ URL: https://www.bibliaparahumanos.tk/
 
 **texto/Gensis 1**: Ou até errada (dentro do razoável).
 
-**texto/Jon1.5,mt2:1-3; nm1**: Você pode incluir várias referências na mesma chamada. A separação de capítulo e versículo pode ser por ponto (.) ou dois pontos (\:), e a separação de referências pode ser por vírgula (,) ou ponto e vírgula (\;).
+**texto/Jon1.5,mt2:1-3; nm1**: Você pode incluir várias referências na mesma chamada. A separação de capítulo e versículo pode ser por ponto (.) ou dois pontos (\:\), e a separação de referências pode ser por vírgula (,) ou ponto e vírgula (\;\).
 
 **texto/Deut 7:1-5, 9, 8:10**: Quando duas referências são do mesmo livro ou capítulo, você pode omitir o nome do livro ou capítulo das referências seguintes.
 
 **texto/Lc3:1-5, x1, num10:5**: Se uma das referências for inválida, isso não atrapalha o restante do resultado.
         
-# English 
+English 
+=========
 
 # Bible API for Humans
 ### Write references however you want, and get bible texts in return.
@@ -48,7 +50,7 @@ The Bible API for Humans is a RESTful API capable of understanding bible referen
 
 **texto/Gensis 1**: Or even mispell it (within a reasonable margin).
 
-**texto/Jon1.5,mt2:1-3; nm1**: You may include multiple references in a single call. The separator for chapter and verse may be a dot (.) or a colon (\:), and the separator for multiple references may be a comma (,) or a semi-colon (\;).
+**texto/Jon1.5,mt2:1-3; nm1**: You may include multiple references in a single call. The separator for chapter and verse may be a dot (.) or a colon (\:\), and the separator for multiple references may be a comma (,) or a semi-colon (\;\).
 
 **texto/Deut 7:1-5, 9, 8:10**: When two chained references are for the same book or chapter, you can ommit the book or chapter for the following references.
 
